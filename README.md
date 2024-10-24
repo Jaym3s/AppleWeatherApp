@@ -28,6 +28,12 @@ By default, rails doesn't cache in development. To toggle caching, run `rails de
 
 This is a very basic rails app, it does not use a database (yet), instead relying on Memory Caching for persistance. No db:create or migrations are required. After setup above, simply bundle and start the server!
 
+## DEVELOPMENT
+
+### Testing
+
+This app uses http://rspec.info in traditional BDD style. Next step would be a full integration test.
+
 # ATTRIBUTIONS
 
 Thanks to https://openweathermap.org and the gems provided by the open source community which can be found in the Gemfile.
