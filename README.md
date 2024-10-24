@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome.
 
-Things you may want to cover:
+This is a very basic Weather App. It is missing a number of things, completely lacks style, however my focus was on API interaction, scalability, reliability (eventually at least), functionality, and testability.
 
-* Ruby version
+A number of the files and tests are extremely simple, I look forward to explaining my rational on designing the code the way I did in future conversations. The short answer is for ease of scalability and reliability improvements.
 
-* System dependencies
+## SETUP
 
-* Configuration
+### External API Key
 
-* Database creation
+This application uses Open Weather and requires an API key to be setup.
+To do so:
+ * Visit: https://openweathermap.org and create a free account.
+ * After signing in, visit: https://home.openweathermap.org/api_keys and generate a key.
+ * Copy `.env.example` to `.env`.
+ * Add the key to `.env` to it's appropriate location.
 
-* Database initialization
+### Caching
 
-* How to run the test suite
+By default, rails doesn't cache in development. To toggle caching, run `rails dev:cache`
 
-* Services (job queues, cache servers, search engines, etc.)
+## LAUNCH
 
-* Deployment instructions
-
-* ...
+This is a very basic rails app, it does not use a database (yet), instead relying on Memory Caching for persistance. No db:create or migrations are required. After setup above, simply bundle and start the server!
