@@ -1,0 +1,13 @@
+<%= form_with model: @forecast, method: :post, local: true do |f| %>
+  <%= fields_for :address, @forecast.address do |address_form| %>
+    <div class="form-group">
+      <%= address_form.label :address_string, "Address" %>
+      <%= address_form.text_field :address_string, class: "form-control", placeholder: "123 Main St, Springfield, IL" %>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
+

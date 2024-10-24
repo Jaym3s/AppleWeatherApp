@@ -44,10 +44,21 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# Parses human entered street addresses
+gem "StreetAddress", :require => "street_address"
+
+# Ain't no party like an http-arty - for easier API requests
+gem "httparty"
+
+# manages API keys easily
+gem "dotenv-rails"
+
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
-  gem "rspec"
+  gem "rspec-rails"
+  gem "pry"
 end
 
 group :development do

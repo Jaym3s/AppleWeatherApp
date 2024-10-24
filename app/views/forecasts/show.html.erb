@@ -1,0 +1,9 @@
+<h2>Weather for <%= @forecast.address.postal_code %></h2>
+<p>Current Temperature: <%= @forecast.current_temp %> °C</p>
+<p>Feels Like: <%= @forecast.feels_like %></p>
+<p>High Temperature: <%= @forecast.today_high %> °C</p>
+<p>Low Temperature: <%= @forecast.today_low %> °C</p>
+
+<% if @cached %>
+  <p><em>This result was fetched from cache.</em></p>
+<% end %>
